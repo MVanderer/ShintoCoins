@@ -1,0 +1,9 @@
+<h2>Mine ShintoCoins</h2>
+<p>Mine ShintoCoins by solving puzzles</p>
+<p>{{puzzle['question']}}</p>
+<form (submit)="submitAnswer()" autocomplete="off">
+  <input type="text" name="puzzleAnswer" [(ngModel)]="puzzleAnswer">
+  <input type="submit" value="Mine">
+</form>
+<p *ngIf="wrong">Your answer {{prevAnswer}} is incorrect. Try again?</p>
+<a (click)="tryAgain()">Try another question</a>
